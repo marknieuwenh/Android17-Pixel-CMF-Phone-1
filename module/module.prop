@@ -1,0 +1,6 @@
+id=cmf_tetris_gsi
+name=CMF Phone 1 GSI tuning + Pixel Launcher
+version=@VERSION@
+versionCode=@VERSION_CODE@
+author=marknieuwenh
+description=Brings the CMF Phone 1 (Tetris) hardware tuning from stock Nothing OS to an Android 17 GSI and installs Pixel Launcher as the home and recents app.

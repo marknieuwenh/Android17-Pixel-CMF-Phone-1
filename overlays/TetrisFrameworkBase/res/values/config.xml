@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Baseline CMF Phone 1 values that are known from the hardware spec sheet
+    (6.67" 1080x2400 AMOLED, 120 Hz, ambient light sensor). Values read from
+    stock Nothing OS by stock2overlay.py have a higher priority and win.
+-->
+<resources>
+    <!-- 120 Hz panel: let the display switch up to 120 Hz by default -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+    <!-- AMOLED: always-on display is cheap enough to offer -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <!-- The phone has an ambient light sensor -->
+    <bool name="config_automatic_brightness_available">true</bool>
+</resources>

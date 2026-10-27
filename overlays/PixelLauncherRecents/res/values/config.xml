@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Makes Pixel Launcher the recents provider, so gestures and the app switcher go through it. -->
+<resources>
+    <string name="config_recentsComponentName" translatable="false">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
+</resources>

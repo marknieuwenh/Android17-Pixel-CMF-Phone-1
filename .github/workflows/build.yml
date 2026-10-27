@@ -1,0 +1,36 @@
+name: Build module
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Lint shell scripts
+        run: |
+          shellcheck tools/*.sh module/service.sh module/META-INF/com/google/android/update-binary
+          shellcheck -s sh -e SC2034,SC2154 module/customize.sh
+
+      - name: Unit tests
+        run: python3 -m unittest discover -v tests
+
+      - uses: actions/cache@v4
+        with:
+          path: .cache/sdk/*.zip
+          key: android-sdk-${{ hashFiles('tools/sdk.sh') }}
+
+      # CI builds the tuning-only module. Stock Nothing OS values and Pixel
+      # Launcher are added locally (they are proprietary and device-specific).
+      - name: Build module (no stock dump, no Pixel Launcher)
+        run: tools/build-module.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cmf-phone-1-gsi-tuning
+          path: out/*.zip

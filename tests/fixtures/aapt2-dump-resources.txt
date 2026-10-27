@@ -1,0 +1,40 @@
+Binary APK
+Package name=com.nothing.fake.overlay id=7f
+  type array id=01 entryCount=4
+    resource 0x7f010000 array/config_autoBrightnessDisplayValuesNits
+      () (array) size=2
+        [2.5, 10]
+    resource 0x7f010001 array/config_autoBrightnessLevels
+      () (array) size=3
+        [2, 10, 300]
+    resource 0x7f010002 array/config_udfps_sensor_props
+      () (array) size=3
+        [540, 2100, 90]
+    resource 0x7f010003 array/config_udfps_x
+      () (array) size=2
+        ["a b", "c"]
+  type bool id=02 entryCount=1
+    resource 0x7f020000 bool/config_dozeAlwaysOnDisplayAvailable
+      () true
+  type color id=03 entryCount=1
+    resource 0x7f030000 color/config_foo
+      () #ff112233
+  type dimen id=04 entryCount=3
+    resource 0x7f040000 dimen/config_screenBrightnessSettingMinimumFloat
+      () 0.0039
+    resource 0x7f040001 dimen/rounded_corner_radius
+      () 104.000000px
+    resource 0x7f040002 dimen/status_bar_height_portrait
+      () 32.500000dp
+      (land) 24.000000dp
+  type fraction id=05 entryCount=1
+    resource 0x7f050000 fraction/config_maximumScreenDimRatio
+      () 0.200000%
+  type integer id=06 entryCount=1
+    resource 0x7f060000 integer/config_defaultPeakRefreshRate
+      () 120
+  type string id=07 entryCount=2
+    resource 0x7f070000 string/config_mainBuiltInDisplayCutout
+      () "M 0,0 H -20 V 90 H 20 Z @dp"
+    resource 0x7f070001 string/config_recentsComponentName
+      () "com.nothing.launcher/com.android.quickstep.RecentsActivity"
